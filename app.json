@@ -1,6 +1,18 @@
-{
-"logo": "https://telegra.ph/file/327ae4aca7dee0d5dd67c.jpg",
+{"logo": "https://telegra.ph/file/327ae4aca7dee0d5dd67c.jpg",
 "name": "—⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—",
 "repository": "https://github.com/HypeVoidSoul/Anime-Downloader.git",
 "description": "—⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—",
-}
+"website": "https://t,me/hypevoids",
+"keywords": ["telegram","personal_bot","pyrogram","telegram-bot","information"],
+"env": {
+"API_ID": {
+"description": "api_id part of your Telegram API Key from my.telegram.org/apps",
+"required": true
+},"API_HASH": {
+"description": "api_hash part of your Telegram API Key from my.telegram.org/apps",
+"required": true
+},"BOT_TOKEN": {
+"description": "Your BotFather Token.",
+"required": true
+}},
+"buildpacks": [{"url": "heroku/python"}]}
