@@ -3,7 +3,7 @@ kaizoku_btn = "Kaizoku ☠️"
 kayo_btn = "Kayo 🏴‍☠️"
 prequel_btn = "⬅️ Prequel"
 sequel_btn = "Sequel ➡️"
-close_btn = "Close ❌"
+close_btn = "Exit ❌"
 airing_query = """
 query ($id: Int,$search: String) { 
 Media (id: $id, type: ANIME,search: $search) {
@@ -120,7 +120,8 @@ HELP_STRINGS = """—⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—
  search an anime on animekayo.com
 
 
-—⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—"""
+—⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—
+"""
 HELPABLE = {}
 PM_START_TEXT = """—⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—
 
@@ -128,7 +129,8 @@ I am Anime Searcher and Downloader by @HypeVoidLab
 
 I AM IN MY EARLY BETA STAGE SO DO KNOW MINOR BUGS ARE PRESENT.
 
-—⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—"""
+—⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—
+"""
 IMPORTED = {}
 HELPABLE = {}
 ASTRAKOBOT_IMG = "https://telegra.ph/file/327ae4aca7dee0d5dd67c.jpg"
@@ -153,4 +155,5 @@ Get information about anime, manga.
 火• /kayo <anime>
  search an anime on animekayo.com
 
-—⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—"""
+—⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—
+"""
