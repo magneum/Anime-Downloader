@@ -1,5 +1,9 @@
-from Moon import *
-from Import import *
+from time import sleep
+from typing import Dict, List
+from telegram import InlineKeyboardButton
+from telegram import InlineKeyboardButton
+
+
 
 class EqInlineKeyboardButton(InlineKeyboardButton):
     def __eq__(self, other):
@@ -11,10 +15,7 @@ class EqInlineKeyboardButton(InlineKeyboardButton):
     def __gt__(self, other):
         return self.text > other.text
 
-
-
-
-def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
+def pages(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
     if not chat:
         modules = sorted(
             [

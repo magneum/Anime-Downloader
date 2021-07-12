@@ -1,7 +1,7 @@
 from Moon import *
 from Import import *
 from .help import send_help
-
+from HVAnimeBot import dispatcher
 
 
 def start(update: Update, context: CallbackContext):

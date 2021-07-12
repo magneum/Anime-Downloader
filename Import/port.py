@@ -14,9 +14,8 @@ from typing import Dict, List
 from telegram import InlineKeyboardButton
 import requests
 import html
-from HVAnimeBot import dispatcher
 from telegram.error import BadRequest
-from HVAnimeBot.misc import paginate_modules
+from HVAnimeBot.misc import pages
 from telegram.utils.helpers import escape_markdown
-from telegram.ext import CallbackContext, CommandHandler, CallbackQueryHandler, run_async,
+from telegram.ext import CallbackContext, CommandHandler, CallbackQueryHandler, run_async
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update

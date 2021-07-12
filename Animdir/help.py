@@ -1,10 +1,10 @@
 from Moon import *
 from Import import *
-
+from HVAnimeBot import dispatcher
 
 def send_help(chat_id, text, keyboard=None):
     if not keyboard:
-        keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
+        keyboard = InlineKeyboardMarkup(pages(0, HELPABLE, "help"))
     dispatcher.bot.send_message(
         chat_id=chat_id,
         text=text,
@@ -47,7 +47,7 @@ def help_button(update: Update, context: CallbackContext):
                 text=HELP_STRINGS,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(curr_page - 1, HELPABLE, "help")
+                    pages(curr_page - 1, HELPABLE, "help")
                 ),
             )
 
@@ -57,7 +57,7 @@ def help_button(update: Update, context: CallbackContext):
                 text=HELP_STRINGS,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(next_page + 1, HELPABLE, "help")
+                    pages(next_page + 1, HELPABLE, "help")
                 ),
             )
 
@@ -66,7 +66,7 @@ def help_button(update: Update, context: CallbackContext):
                 text=HELP_STRINGS,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(0, HELPABLE, "help")
+                    pages(0, HELPABLE, "help")
                 ),
             )
         context.bot.answer_callback_query(query.id)

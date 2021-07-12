@@ -1,6 +1,6 @@
 from Moon import *
 from Import import *
-
+from HVAnimeBot import dispatcher
 
 __anime__ = "🔥 Get Anime"
 
