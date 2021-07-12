@@ -7,5 +7,5 @@ RUN python -m pip install --upgrade pip
 RUN git clone https://github.com/HypeVoidSoul/Anime-Downloader.git
 RUN cd Anime-Downloader
 WORKDIR /Anime-Downloader
-RUN pip install -r ӄʟǟաʀօɮօȶ.txt
+RUN pip install -r ʀօɮօȶ.txt
 CMD python3 subp.py
