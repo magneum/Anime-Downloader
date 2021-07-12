@@ -1,1 +1,1 @@
-web: python3 subp.py
+worker: python3 subp.py
