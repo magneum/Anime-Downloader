@@ -1,4 +1,4 @@
-🔥 ΉYPΣ VӨID LΛB 🔥__Wê Ärê H¥þêVðïÐ§__🔥 ΉYPΣ VӨID LΛB 🔥
+|🔥🔥|======|ΉYPΣ_VӨID_LΛB|======|🔥🔥|
 [![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 # 『—⚡️••÷[  Anime Downloader  ]÷••⚡️—』
 <img src="https://telegra.ph/file/327ae4aca7dee0d5dd67c.jpg" width="60%" />
@@ -28,4 +28,4 @@
 ## 📜 LICΣПSΣ
 - 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗔𝗙𝗞 𝗥𝗼𝗯𝗼𝘁 𝘪𝘴 𝘭𝘪𝘤𝘦𝘯𝘴𝘦𝘥 𝘶𝘯𝘥𝘦𝘳 𝘵𝘩𝘦 𝘎𝘕𝘜 𝘎𝘦𝘯𝘦𝘳𝘢𝘭 𝘗𝘶𝘣𝘭𝘪𝘤 𝘓𝘪𝘤𝘦𝘯𝘴𝘦 𝘷3.0[GNU V3.0](LICENSE)
 
-🔥 ΉYPΣ VӨID LΛB 🔥__Wê Ärê H¥þêVðïÐ§__🔥 ΉYPΣ VӨID LΛB 🔥
+|🔥🔥|======|ΉYPΣ_VӨID_LΛB|======|🔥🔥|
