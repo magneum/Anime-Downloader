@@ -130,6 +130,8 @@ I am Anime Searcher and Downloader by @HypeVoidLab
 
 I AM IN MY EARLY BETA STAGE SO DO KNOW MINOR BUGS ARE PRESENT.
 
+📺Ðêv Mêñ†ïðñ:
+ @HypeVoidBot | @HypeVoidSoul
 —⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—
 """
 IMPORTED = {}
