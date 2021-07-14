@@ -8,7 +8,29 @@
 ```sh
 ╰✨✨♢--------------------------------------------------------------------♢✨✨╮
 ```
+## ❓ WΉY MΛDΣ ƬΉIS BӨƬ?
+```sh
+Get information about findanime, findmanga.
 
+火• /findanime <findanime>
+ returns information about the anime.
+ 
+火• /findmanga <findmanga>
+ returns information about the manga.
+ 
+火• /future
+ returns a list of new anime.
+ 
+火• /download1 <findanime>
+ search an anime from server1
+ 
+火• /download2 <findanime>
+ search an anime from server2
+
+—⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—
+
+╰✨✨♢--------------------------------------------------------------------♢✨✨╮
+```
 ## 💠 DΣPLӨY
 ♢ ꜰɪʀꜱᴛ ꜰᴏʀᴋ ᴀɴᴅ ꜱᴛᴀʀ ᴛʜᴇ ʀᴇᴘᴏ ᴀɴᴅ ᴛʜᴇɴ ᴄʜᴀɴɢᴇ [app.bot](app.bot) ᴛᴏ app.json
 
