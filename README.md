@@ -18,7 +18,7 @@ Get information about findanime, findmanga.
 火• /findmanga <findmanga>
  returns information about the manga.
  
-火• /future
+火• /upcoming
  returns a list of new anime.
  
 火• /download1 <findanime>

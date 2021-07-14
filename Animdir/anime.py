@@ -174,12 +174,12 @@ def findmanga(update: Update, context: CallbackContext):
             msg,
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(buttons))
-def future(update: Update, context: CallbackContext):
+def upcoming(update: Update, context: CallbackContext):
     jikan = jikanpy.jikan.Jikan()
     upcomin = jikan.top(
     "findanime",
     page=1,
-    subtype="future")
+    subtype="upcoming")
     upcoming_list = [entry["title"] for entry in upcomin["top"]]
     upcoming_message = ""
     for entry_num in range(len(upcoming_list)):
@@ -264,7 +264,7 @@ OUT = UT
 
 ANIME_HANDLER = CommandHandler("findanime", findanime, run_async=True)
 MANGA_HANDLER = CommandHandler("findmanga", findmanga, run_async=True)
-UPCOMING_HANDLER = CommandHandler("future", future, run_async=True)
+UPCOMING_HANDLER = CommandHandler("upcoming", upcoming, run_async=True)
 KAIZOKU_SEARCH_HANDLER = CommandHandler("download1", download1, run_async=True)
 KAYO_SEARCH_HANDLER = CommandHandler("download2", download2, run_async=True)
 
@@ -275,5 +275,5 @@ dispatcher.add_handler(KAYO_SEARCH_HANDLER)
 dispatcher.add_handler(UPCOMING_HANDLER)
 
 
-__command_list__ = ["findanime","findmanga","future","download1","download2"]
+__command_list__ = ["findanime","findmanga","upcoming","download1","download2"]
 __handlers__ = [ANIME_HANDLER,MANGA_HANDLER,UPCOMING_HANDLER,KAIZOKU_SEARCH_HANDLER,KAYO_SEARCH_HANDLER]
