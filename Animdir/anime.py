@@ -4,17 +4,6 @@ from HVAnimeBot import dispatcher
 
 __anime__ = "🔥 Get Anime"
 
-
-def shorten(description, info="anilist.co"):
-    msg = ""
-    if len(description) > 700:
-        description = description[0:500] + "...."
-        msg += f"\n*Description*: _{description}_[Read More]({info})"
-    else:
-        msg += f"\n*Description*:_{description}_"
-    return msg
-
-
 def t(milliseconds: int) -> str:
     """Inputs time in milliseconds, to get beautified time,
     as string"""
@@ -30,9 +19,6 @@ def t(milliseconds: int) -> str:
         + ((str(milliseconds) + " ms, ") if milliseconds else "")
     )
     return tmp[:-2]
-
-
-
 def findanime(update: Update, context: CallbackContext):
     message = update.effective_message
     search = message.text.split(" ", 1)
@@ -120,7 +106,6 @@ def findanime(update: Update, context: CallbackContext):
             msg,
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(buttons))
-
 def findmanga(update: Update, context: CallbackContext):
     message = update.effective_message
     search = message.text.split(" ", 1)
@@ -198,27 +183,21 @@ def future(update: Update, context: CallbackContext):
             break
         upcoming_message += f"{entry_num + 1}. {upcoming_list[entry_num]}\n"
     update.effective_message.reply_text(upcoming_message)
-    
-    
-
 def site_search(update: Update, context: CallbackContext, site: str):
     message = update.effective_message
     args = message.text.strip().split(" ", 1)
     more_results = True
-
     try:
         search_query = args[1]
     except IndexError:
         message.reply_text(
         "Give something to search")
         return
-
     if site == "download1":
         search_url = f"https://animekaizoku.com/?s={search_query}"
         html_text = requests.get(search_url).text
         soup = bs4.BeautifulSoup(html_text, "html.parser")
         search_result = soup.find_all("h2", {"class": "post-title"})
-
         if search_result:
             result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> @KayoAnime: \n"
             for entry in search_result:
@@ -228,7 +207,6 @@ def site_search(update: Update, context: CallbackContext, site: str):
         else:
             more_results = False
             result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> @KaizokuAnime"
-
     elif site == "download2":
         search_url = f"https://animekayo.com/?s={search_query}"
         html_text = requests.get(search_url).text
@@ -248,7 +226,6 @@ def site_search(update: Update, context: CallbackContext, site: str):
         "See all results",
         url=search_url)
         ]]
-
     if more_results:
         message.reply_text(
         result,
@@ -260,21 +237,24 @@ def site_search(update: Update, context: CallbackContext, site: str):
         result,
         parse_mode=ParseMode.HTML,
         disable_web_page_preview=True)
-
-
 def download1(update: Update, context: CallbackContext):
     site_search(
     update,
     context,
     "download1")
-
-
 def download2(update: Update, context: CallbackContext):
     site_search(
     update,
     context,
     "download2")
-
+def shorten(description, info="anilist.co"):
+    msg = ""
+    if len(description) > 700:
+        description = description[0:500] + "...."
+        msg += f"\n*Description*: _{description}_[Read More]({info})"
+    else:
+        msg += f"\n*Description*:_{description}_"
+    return msg
 
 OUT = UT
 
