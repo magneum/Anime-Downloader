@@ -1,6 +1,6 @@
 |🔥🔥|======|ΉYPΣ_VӨID_LΛB|======|🔥🔥|
 [![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
-# 『—⚡️••÷[  Anime Downloader  ]÷••⚡️—』
+# 『—⚡️••÷[  𝗔𝗻𝗶𝗺𝗲 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗿  ]÷••⚡️—』
 <img src="https://telegra.ph/file/327ae4aca7dee0d5dd67c.jpg" width="60%" />
 <img align="centre" src="https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg" alt="HypeVoidSoul"/>
 <img align="centre" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"/>
@@ -20,7 +20,7 @@
 ```
 
 ## 〽️ MΣΣƬ US ӨЯ CΉΣCK ӨƬΉΣЯ BӨƬS   
-- [![Generic badge](https://img.shields.io/badge/YouTubeMusicDownloader-Vïå_ßð†-red.svg)](https://t.me/HVYouTubeMusicBot)
+- [![Generic badge](https://img.shields.io/badge/𝗔𝗻𝗶𝗺𝗲_𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗿-Vïå_ßð†-red.svg)](https://t.me/HVYouTubeMusicBot)
 𝙳𝚒𝚛𝚎𝚌𝚝𝚕𝚢 𝚞𝚜𝚎 𝚃𝚑𝚎 𝙱𝚘𝚝 𝚒𝚗 𝚝𝚎𝚕𝚎𝚐𝚛𝚊𝚖
 - [![Generic badge](https://img.shields.io/badge/𝙷𝚢𝚙𝚎𝚅𝚘𝚒𝚍𝙱𝚘𝚝-Vïå_ßð†-orange.svg)](https://t.me/HypeVoidBot) 𝘛𝘶𝘳𝘯 𝘰𝘯 𝘣𝘰𝘵 𝘪𝘯 𝘵𝘦𝘭𝘦𝘨𝘳𝘢𝘮 𝘢𝘯𝘥 𝘵𝘺𝘱𝘦 /us
 
