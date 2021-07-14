@@ -104,19 +104,19 @@ url = "https://graphql.anilist.co"
 HELPABLE = {}
 HELP_STRINGS = """—⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—
 
-火• /anime <anime>
+火• /findanime <findanime>
  returns information about the anime.
  
-火• /manga <manga>
+火• /findmanga <findmanga>
  returns information about the manga.
  
-火• /upcoming 
- returns a list of new anime in the upcoming seasons.
+火• /future
+ returns a list of new anime in the futureseasons.
  
-火• /kaizoku <anime>
+火• /download1 <findanime>
  search an anime on animekaizoku.com
  
-火• /kayo <anime>
+火• /download2 <findanime>
  search an anime on animekayo.com
 
 
@@ -136,23 +136,23 @@ HELPABLE = {}
 ASTRAKOBOT_IMG = "https://telegra.ph/file/327ae4aca7dee0d5dd67c.jpg"
 UT = __help__ = """—⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—
 
-Get information about anime, manga.
+Get information about findanime, findmanga.
 
 *Available commands:*
 
-火• /anime <anime>
+火• /findanime <findanime>
  returns information about the anime.
  
-火• /manga <manga>
+火• /findmanga <findmanga>
  returns information about the manga.
  
-火• /upcoming 
- returns a list of new anime in the upcoming seasons.
+火• /future
+ returns a list of new anime in the futureseasons.
  
-火• /kaizoku <anime>
+火• /download1 <findanime>
  search an anime on animekaizoku.com
  
-火• /kayo <anime>
+火• /download2 <findanime>
  search an anime on animekayo.com
 
 —⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—

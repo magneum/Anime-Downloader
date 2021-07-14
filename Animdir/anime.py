@@ -33,11 +33,11 @@ def t(milliseconds: int) -> str:
 
 
 
-def anime(update: Update, context: CallbackContext):
+def findanime(update: Update, context: CallbackContext):
     message = update.effective_message
     search = message.text.split(" ", 1)
     if len(search) == 1:
-        update.effective_message.reply_text("Format : /anime < anime name >")
+        update.effective_message.reply_text("Format : /findanime < findanime name >")
         return
     else:
         search = search[1]
@@ -121,12 +121,12 @@ def anime(update: Update, context: CallbackContext):
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(buttons))
 
-def manga(update: Update, context: CallbackContext):
+def findmanga(update: Update, context: CallbackContext):
     message = update.effective_message
     search = message.text.split(" ", 1)
     if len(search) == 1:
         update.effective_message.reply_text(
-        "Format : /manga < manga name >")
+        "Format : /findmanga < findmanga name >")
         return
     search = search[1]
     variables = {
@@ -185,12 +185,12 @@ def manga(update: Update, context: CallbackContext):
             msg,
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(buttons))
-def upcoming(update: Update, context: CallbackContext):
+def future(update: Update, context: CallbackContext):
     jikan = jikanpy.jikan.Jikan()
     upcomin = jikan.top(
-    "anime",
+    "findanime",
     page=1,
-    subtype="upcoming")
+    subtype="future")
     upcoming_list = [entry["title"] for entry in upcomin["top"]]
     upcoming_message = ""
     for entry_num in range(len(upcoming_list)):
@@ -213,7 +213,7 @@ def site_search(update: Update, context: CallbackContext, site: str):
         "Give something to search")
         return
 
-    if site == "kaizoku":
+    if site == "download1":
         search_url = f"https://animekaizoku.com/?s={search_query}"
         html_text = requests.get(search_url).text
         soup = bs4.BeautifulSoup(html_text, "html.parser")
@@ -229,7 +229,7 @@ def site_search(update: Update, context: CallbackContext, site: str):
             more_results = False
             result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> @KaizokuAnime"
 
-    elif site == "kayo":
+    elif site == "download2":
         search_url = f"https://animekayo.com/?s={search_query}"
         html_text = requests.get(search_url).text
         soup = bs4.BeautifulSoup(html_text, "html.parser")
@@ -262,27 +262,27 @@ def site_search(update: Update, context: CallbackContext, site: str):
         disable_web_page_preview=True)
 
 
-def kaizoku(update: Update, context: CallbackContext):
+def download1(update: Update, context: CallbackContext):
     site_search(
     update,
     context,
-    "kaizoku")
+    "download1")
 
 
-def kayo(update: Update, context: CallbackContext):
+def download2(update: Update, context: CallbackContext):
     site_search(
     update,
     context,
-    "kayo")
+    "download2")
 
 
 OUT = UT
 
-ANIME_HANDLER = CommandHandler("anime", anime, run_async=True)
-MANGA_HANDLER = CommandHandler("manga", manga, run_async=True)
-UPCOMING_HANDLER = CommandHandler("upcoming", upcoming, run_async=True)
-KAIZOKU_SEARCH_HANDLER = CommandHandler("kaizoku", kaizoku, run_async=True)
-KAYO_SEARCH_HANDLER = CommandHandler("kayo", kayo, run_async=True)
+ANIME_HANDLER = CommandHandler("findanime", findanime, run_async=True)
+MANGA_HANDLER = CommandHandler("findmanga", findmanga, run_async=True)
+UPCOMING_HANDLER = CommandHandler("future", future, run_async=True)
+KAIZOKU_SEARCH_HANDLER = CommandHandler("download1", download1, run_async=True)
+KAYO_SEARCH_HANDLER = CommandHandler("download2", download2, run_async=True)
 
 dispatcher.add_handler(ANIME_HANDLER)
 dispatcher.add_handler(MANGA_HANDLER)
@@ -291,5 +291,5 @@ dispatcher.add_handler(KAYO_SEARCH_HANDLER)
 dispatcher.add_handler(UPCOMING_HANDLER)
 
 
-__command_list__ = ["anime","manga","character","user","upcoming","kaizoku","airing","kayo"]
+__command_list__ = ["findanime","findmanga","future","download1","download2"]
 __handlers__ = [ANIME_HANDLER,MANGA_HANDLER,UPCOMING_HANDLER,KAIZOKU_SEARCH_HANDLER,KAYO_SEARCH_HANDLER]
