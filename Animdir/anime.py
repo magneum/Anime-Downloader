@@ -49,7 +49,11 @@ def findanime(update: Update, context: CallbackContext):
 
 *Stars Given*: {json['averageScore']}
 
-*Genres*: `"""
+*Genres*: `
+
+📺Ðêv Mêñ†ïðñ:
+ @HypeVoidBot | @HypeVoidSoul
+—⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—"""
         for x in json["genres"]:
             msg += f"{x}, "
         msg = msg[:-2] + "`\n"

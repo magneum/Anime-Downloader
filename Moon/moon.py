@@ -119,7 +119,8 @@ HELP_STRINGS = """—⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—
 火• /download2 <findanime>
  search an anime from server2
 
-
+📺Ðêv Mêñ†ïðñ:
+ @HypeVoidBot | @HypeVoidSoul
 —⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—
 """
 HELPABLE = {}
@@ -155,5 +156,7 @@ Get information about findanime, findmanga.
 火• /download2 <findanime>
  search an anime from server2
 
+📺Ðêv Mêñ†ïðñ:
+ @HypeVoidBot | @HypeVoidSoul
 —⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—
 """
