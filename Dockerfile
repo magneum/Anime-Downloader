@@ -8,4 +8,4 @@ RUN git clone https://github.com/HypeVoidSoul/Anime-Downloader.git
 RUN cd Anime-Downloader
 WORKDIR /Anime-Downloader
 RUN pip install -r ʀօɮօȶ.txt
-CMD python3 subp.py
+CMD python3 hypefile.py
