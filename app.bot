@@ -12,7 +12,7 @@
 },"API_HASH": {
 "description": "api_hash part of your Telegram API Key from my.telegram.org/apps",
 "required": true
-},"BOT_TOKEN": {
+},"TOKEN": {
 "description": "Your BotFather Token.",
 "required": true
 }},
