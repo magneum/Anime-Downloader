@@ -123,7 +123,7 @@ HELP_STRINGS = """—⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—
 HELPABLE = {}
 PM_START_TEXT = """—⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—
 
-I am Anime Searcher and Downloader by @HypeVoidLab
+I am Anime Searcher and Downloader by @KrakinzLab
 
 I AM IN MY EARLY BETA STAGE SO DO KNOW MINOR BUGS ARE PRESENT.
 
