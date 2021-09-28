@@ -1,8 +1,20 @@
+"""
+•=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=•
+                                                       GNU GENERAL PUBLIC LICENSE 
+                                                         Version 3, 29 June 2007
+                                                Copyright (C) 2007 Free Software Foundation
+                                            Everyone is permitted to 𝗰𝗼𝗽𝘆 𝗮𝗻𝗱 𝗱𝗶𝘀𝘁𝗿𝗶𝗯𝘂𝘁𝗲 verbatim copies
+                                                of this license document, 𝗯𝘂𝘁 𝗰𝗵𝗮𝗻𝗴𝗶𝗻𝗴 𝗶𝘁 𝗶𝘀 𝗻𝗼𝘁 𝗮𝗹𝗹𝗼𝘄𝗲𝗱.
+                                                has been licensed under GNU General Public License
+                                                𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁
+•=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=••=•
+"""
 from Moon import *
 from Import import *
 from HVAnimeBot import dispatcher
 
 __anime__ = "🔥 Get Anime"
+
 
 def t(milliseconds: int) -> str:
     """Inputs time in milliseconds, to get beautified time,
@@ -19,11 +31,14 @@ def t(milliseconds: int) -> str:
         + ((str(milliseconds) + " ms, ") if milliseconds else "")
     )
     return tmp[:-2]
+
+
 def findanime(update: Update, context: CallbackContext):
     message = update.effective_message
     search = message.text.split(" ", 1)
     if len(search) == 1:
-        update.effective_message.reply_text("Format : /findanime < findanime name >")
+        update.effective_message.reply_text(
+            "Format : /findanime < findanime name >")
         return
     else:
         search = search[1]
@@ -78,66 +93,68 @@ def findanime(update: Update, context: CallbackContext):
         msg += shorten(description, info)
         image = json.get("bannerImage", None)
         if trailer:
-            buttons=[[
+            buttons = [[
                 InlineKeyboardButton(
-                "Get To Know More",
-                url=info),
+                    "Get To Know More",
+                    url=info),
                 InlineKeyboardButton(
-                "Trailer 🎬",
-                url=trailer)
-                ]]
+                    "Trailer 🎬",
+                    url=trailer)
+            ]]
         else:
-            buttons=[[
+            buttons = [[
                 InlineKeyboardButton(
-                "Get To Know More",
-                url=info)
-                ]]
+                    "Get To Know More",
+                    url=info)
+            ]]
         if image:
             try:
                 update.effective_message.reply_photo(
-                photo=image,
-                caption=msg,
-                parse_mode=ParseMode.MARKDOWN,
-                reply_markup=InlineKeyboardMarkup(buttons))
+                    photo=image,
+                    caption=msg,
+                    parse_mode=ParseMode.MARKDOWN,
+                    reply_markup=InlineKeyboardMarkup(buttons))
             except:
                 msg += f" [〽️]({image})"
                 update.effective_message.reply_text(
+                    msg,
+                    parse_mode=ParseMode.MARKDOWN,
+                    reply_markup=InlineKeyboardMarkup(buttons))
+        else:
+            update.effective_message.reply_text(
                 msg,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(buttons))
-        else:
-            update.effective_message.reply_text(
-            msg,
-            parse_mode=ParseMode.MARKDOWN,
-            reply_markup=InlineKeyboardMarkup(buttons))
+
+
 def findmanga(update: Update, context: CallbackContext):
     message = update.effective_message
     search = message.text.split(" ", 1)
     if len(search) == 1:
         update.effective_message.reply_text(
-        "Format : /findmanga < findmanga name >")
+            "Format : /findmanga < findmanga name >")
         return
     search = search[1]
     variables = {
-    "search": search}
+        "search": search}
     json = requests.post(
-    url, json={
-    "query": manga_query,
-    "variables": variables}
+        url, json={
+            "query": manga_query,
+            "variables": variables}
     ).json()
     msg = ""
     if "errors" in json.keys():
         update.effective_message.reply_text(
-        "Manga not found")
+            "Manga not found")
         return
     if json:
         json = json["data"]["Media"]
-        title,title_native = json["title"].get("romaji", False), json["title"].get(
-        "native", False)
-        start_date,status,score =(
-        json["startDate"].get("year", False),
-        json.get("status", False),
-        json.get("averageScore", False))
+        title, title_native = json["title"].get("romaji", False), json["title"].get(
+            "native", False)
+        start_date, status, score = (
+            json["startDate"].get("year", False),
+            json.get("status", False),
+            json.get("averageScore", False))
         if title:
             msg += f"*{title}*"
             if title_native:
@@ -159,21 +176,22 @@ def findmanga(update: Update, context: CallbackContext):
         if image:
             try:
                 update.effective_message.reply_photo(
-                photo=image,
-                caption=msg,
-                parse_mode=ParseMode.MARKDOWN,
-                reply_markup=InlineKeyboardMarkup(buttons))
+                    photo=image,
+                    caption=msg,
+                    parse_mode=ParseMode.MARKDOWN,
+                    reply_markup=InlineKeyboardMarkup(buttons))
             except:
                 msg += f" [〽️]({image})"
                 update.effective_message.reply_text(
+                    msg,
+                    parse_mode=ParseMode.MARKDOWN,
+                    reply_markup=InlineKeyboardMarkup(buttons))
+        else:
+            update.effective_message.reply_text(
                 msg,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(buttons))
-        else:
-            update.effective_message.reply_text(
-            msg,
-            parse_mode=ParseMode.MARKDOWN,
-            reply_markup=InlineKeyboardMarkup(buttons))
+
 
 def site_search(update: Update, context: CallbackContext, site: str):
     message = update.effective_message
@@ -183,7 +201,7 @@ def site_search(update: Update, context: CallbackContext, site: str):
         search_query = args[1]
     except IndexError:
         message.reply_text(
-        "Give something to search")
+            "Give something to search")
         return
     if site == "download1":
         search_url = f"https://animekaizoku.com/?s={search_query}"
@@ -213,32 +231,38 @@ def site_search(update: Update, context: CallbackContext, site: str):
             post_link = entry.a["href"]
             post_name = html.escape(entry.text.strip())
             result += f"• <a href='{post_link}'>{post_name}</a>\n"
-    buttons =[[
+    buttons = [[
         InlineKeyboardButton(
-        "See all results",
-        url=search_url)
-        ]]
+            "See all results",
+            url=search_url)
+    ]]
     if more_results:
         message.reply_text(
-        result,
-        parse_mode=ParseMode.HTML,
-        reply_markup=InlineKeyboardMarkup(buttons),
-        disable_web_page_preview=True)
+            result,
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(buttons),
+            disable_web_page_preview=True)
     else:
         message.reply_text(
-        result,
-        parse_mode=ParseMode.HTML,
-        disable_web_page_preview=True)
+            result,
+            parse_mode=ParseMode.HTML,
+            disable_web_page_preview=True)
+
+
 def download1(update: Update, context: CallbackContext):
     site_search(
-    update,
-    context,
-    "download1")
+        update,
+        context,
+        "download1")
+
+
 def download2(update: Update, context: CallbackContext):
     site_search(
-    update,
-    context,
-    "download2")
+        update,
+        context,
+        "download2")
+
+
 def shorten(description, info="anilist.co"):
     msg = ""
     if len(description) > 700:
@@ -247,6 +271,7 @@ def shorten(description, info="anilist.co"):
     else:
         msg += f"\n*Description*:_{description}_"
     return msg
+
 
 OUT = UT
 
@@ -260,5 +285,6 @@ dispatcher.add_handler(MANGA_HANDLER)
 dispatcher.add_handler(KAIZOKU_SEARCH_HANDLER)
 
 
-__command_list__ = ["findanime","findmanga","download1","download2"]
-__handlers__ = [ANIME_HANDLER,MANGA_HANDLER,KAIZOKU_SEARCH_HANDLER,KAYO_SEARCH_HANDLER]
+__command_list__ = ["findanime", "findmanga", "download1", "download2"]
+__handlers__ = [ANIME_HANDLER, MANGA_HANDLER,
+                KAIZOKU_SEARCH_HANDLER, KAYO_SEARCH_HANDLER]
