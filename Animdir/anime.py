@@ -52,7 +52,7 @@ def findanime(update: Update, context: CallbackContext):
 *Genres*: `
 
 📺Ðêv Mêñ†ïðñ:
- @HypeVoidBot | @HypeVoidSoul
+ @KrakinzBot | @Krakinz
 —⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—"""
         for x in json["genres"]:
             msg += f"{x}, "

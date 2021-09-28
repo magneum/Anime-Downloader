@@ -117,7 +117,7 @@ HELP_STRINGS = """—⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—
  search an anime from server2
 
 📺Ðêv Mêñ†ïðñ:
- @HypeVoidBot | @HypeVoidSoul
+ @KrakinzBot | @Krakinz
 —⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—
 """
 HELPABLE = {}
@@ -128,7 +128,7 @@ I am Anime Searcher and Downloader by @HypeVoidLab
 I AM IN MY EARLY BETA STAGE SO DO KNOW MINOR BUGS ARE PRESENT.
 
 📺Ðêv Mêñ†ïðñ:
- @HypeVoidBot | @HypeVoidSoul
+ @KrakinzBot | @Krakinz
 —⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—
 """
 IMPORTED = {}
@@ -153,6 +153,6 @@ Get information about findanime, findmanga.
  search an anime from server2
 
 📺Ðêv Mêñ†ïðñ:
- @HypeVoidBot | @HypeVoidSoul
+ @KrakinzBot | @Krakinz
 —⚡️••÷[  Aռɨʍɛ-աɛɛɮɛʀ  ]÷••⚡️—
 """
